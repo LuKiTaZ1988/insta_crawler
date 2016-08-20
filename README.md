@@ -9,3 +9,18 @@ Usage:
 ```
 python insta_crawler.py --profile sdiazb
 ```
+
+The Insta Crawler can also be used through Telegram with a bot called InstaCrawlerBot(telegram.me/InstaCrawlerBot). 
+
+The execution of the insta_crawler_telegram_bot.py file works as a host that receives users requests, so while not launched, the bot is not available.
+
+Installation:
+```
+pip install -r requierements.txt
+```
+
+Usage:
+```
+python insta_crawler_telegram_bot.py 
+```
+
