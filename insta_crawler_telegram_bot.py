@@ -4,6 +4,7 @@ from os import listdir, system, path
 
 import os
 import logging
+import ConfigParser
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -11,8 +12,11 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-TOKEN = '248220639:AAGWRh43Vwr12JqxJ6UqaBQQmhvj4hIMsF4'
-BASE_URL = 'https://api.telegram.org/bot' + TOKEN + '/'
+
+config = ConfigParser.RawConfigParser()
+config.read('insta_crawler.cfg')
+
+TOKEN = config.get('Section_Telegram', 'token')
 
 # Define a few command handlers.
 def start(bot, update):
